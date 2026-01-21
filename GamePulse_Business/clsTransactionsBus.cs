@@ -10,6 +10,13 @@ namespace GamePulse_Business
 {
     public class clsTransactionsBus
     {
+        public enum enTransactionType
+        {
+            Recharge = 1,
+            Play = 2,
+            Refund = 3,
+            CashOut = 4
+        }
         public int TransactionID { get; set; }
         public decimal ActualAmount { get; set; } 
         public DateTime? TransactionDate { get; set; }
@@ -28,47 +35,76 @@ namespace GamePulse_Business
         public clsGamesBus GameInfo { get; set; } 
         public clsOffersBus OfferInfo { get; set; }
 
-        private clsTransactionsBus(int TransactionID, decimal ActualAmount, DateTime? TransactionDate,
-                                 decimal BalanceAmount, decimal? GamePrice, int? GameID,
-                                 int CardID, int CreatedByUserID, int? OfferID, int TransactionTypeID)
+        private clsTransactionsBus(
+            int transactionID,
+            decimal actualAmount,
+            DateTime? transactionDate,
+            decimal balanceAmount,
+            decimal? gamePrice,
+            int? gameID,
+            int cardID,
+            int createdByUserID,
+            int? offerID,
+            int transactionTypeID)
         {
-            this.TransactionID = TransactionID;
-            this.ActualAmount = ActualAmount;
-            this.TransactionDate = TransactionDate;
-            this.BalanceAmount = BalanceAmount;
-            this.GamePrice = GamePrice;
-            this.GameID = GameID;
-            this.CardID = CardID;
-            this.CreatedByUserID = CreatedByUserID;
-            this.OfferID = OfferID;
-            this.TransactionTypeID = TransactionTypeID;
+            TransactionID = transactionID;
+            ActualAmount = actualAmount;
+            TransactionDate = transactionDate;
+            BalanceAmount = balanceAmount;
+            GamePrice = gamePrice;
+            GameID = gameID;
+            CardID = cardID;
+            CreatedByUserID = createdByUserID;
+            OfferID = offerID;
+            TransactionTypeID = transactionTypeID;
 
-            this.CardInfo = clsCardsBus.FindByID(CardID);
-            this.UserInfo = clsUsersBus.FindByID(CreatedByUserID);
-            this.TypeInfo = clsTransactionTypesBus.Find(TransactionTypeID);
-
-            this.GameInfo = (GameID != null) ? clsGamesBus.Find((int)GameID) : null;
-            this.OfferInfo = (OfferID != null) ? clsOffersBus.Find((int)OfferID) : null;
+            CardInfo = clsCardsBus.FindByID(cardID);
+            UserInfo = clsUsersBus.FindByID(createdByUserID);
+            TypeInfo = clsTransactionTypesBus.Find(transactionTypeID);
+            GameInfo = gameID.HasValue ? clsGamesBus.Find(gameID.Value) : null;
+            OfferInfo = offerID.HasValue ? clsOffersBus.Find(offerID.Value) : null;
         }
 
-        public static bool RechargeCard(int CardID, decimal Amount, int UserID, object OfferID)
+
+        private static bool UpdateCardBalance(clsCardsBus card, decimal newBalance)
         {
+            card.Balance = newBalance;
+            return card.Save();
+        }
+        public static bool RechargeCard(int CardID, decimal Amount, int UserID, int? OfferID)
+        {
+            if (Amount <= 0) return false;
+
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
+            
             if (Card == null || !Card.IsActive) return false;
 
-            decimal NewBalance = Card.Balance + Amount;
+            decimal TotalToBenefit = Amount;
 
-            int TransactionID = clsTransactionsDataAcc.AddRechargeTransaction(Amount, NewBalance, CardID, UserID, OfferID, 1);
-
-            if (TransactionID != -1)
+            if (OfferID.HasValue)
             {
-                Card.Balance = NewBalance;
-                return true;
+                clsOffersBus offer = clsOffersBus.Find(OfferID.Value);
+
+                if (offer != null && offer.IsActive)
+                {
+                    TotalToBenefit = Amount + offer.CreditAmount;
+                }
             }
-            return false;
+
+            decimal NewBalance = Card.Balance + TotalToBenefit;
+            int TransactionID = clsTransactionsDataAcc.AddRechargeTransaction(Amount, NewBalance, CardID, UserID, OfferID,(int)enTransactionType.Recharge);
+
+            if (TransactionID == -1)
+            {
+               return false;
+            }
+
+            return UpdateCardBalance(Card, NewBalance);
+            
         }
         public static bool PlayCard(int CardID, decimal Amount, int UserID, int GameID)
         {
+            if (Amount <= 0) return false;
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
             if (Card == null || !Card.IsActive) return false;
 
@@ -84,16 +120,17 @@ namespace GamePulse_Business
                 Amount,     
                 GameID,
                 CardID,
-                UserID,2);
+                UserID,
+                (int)enTransactionType.Play);
 
-            if (TransactionID != -1)
+            if (TransactionID == -1)
             {
-                Card.Balance = NewBalance;
-                return true;
+                return false;
             }
-            return false;
+
+            return UpdateCardBalance(Card, NewBalance);
         }
-        public static bool AddRefund(int CardID, decimal RefundAmount, int UserID)
+        public static bool Refund(int CardID, decimal RefundAmount, int UserID)
         {
             if (RefundAmount <= 0 || CardID <= 0) return false;
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
@@ -106,31 +143,32 @@ namespace GamePulse_Business
                 NewBalance,
                 CardID,
                 UserID,
-                3 
+                (int)enTransactionType.Refund
             );
-            if (TransactionID != -1)
+            if (TransactionID == -1)
             {
-                Card.Balance = NewBalance;
-                return true;
+                return false;
             }
-            return false;
+
+            return UpdateCardBalance(Card, NewBalance);
         }
         public static bool CashOut(int CardID, decimal Amount, int UserID)
         {
+            if (Amount <= 0) return false;
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
-            if (Card == null || Card.Balance < Amount) return false;
+            if (Card == null || !Card.IsActive || Card.Balance < Amount) return false;
 
             decimal NewBalance = Card.Balance - Amount; 
 
             
             int TransactionID = clsTransactionsDataAcc.AddRefundTransaction(
-                Amount, NewBalance, CardID, UserID, 4); 
-            if (TransactionID != -1)
+                Amount, NewBalance, CardID, UserID, (int)enTransactionType.CashOut);
+            if (TransactionID == -1)
             {
-                Card.Balance = NewBalance;
-                return true;
+                return false;
             }
-            return false;
+
+            return UpdateCardBalance(Card, NewBalance);
         }
         public static DataTable GetAllTransactions()
         {
