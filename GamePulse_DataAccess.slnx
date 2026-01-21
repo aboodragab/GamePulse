@@ -1,3 +1,4 @@
 <Solution>
-  <Project Path="GamePulse_DataAccess/GamePulse_DataAccess.csproj" />
+  <Project Path="GamePulse_Business/GamePulse_Business.csproj" Id="107ce538-7088-433b-912f-3192b24c5788" />
+  <Project Path="GamePulse_DataAccess/GamePulse_DataAccess.csproj" Id="e9e105e5-86f8-4059-9fca-8233bed4e9d7" />
 </Solution>
