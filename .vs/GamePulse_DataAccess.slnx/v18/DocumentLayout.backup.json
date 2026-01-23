@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_business\\clstransactionsbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|solutionrelative:gamepulse_business\\clstransactionsbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_dataaccess\\clstransactionsdataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|solutionrelative:gamepulse_dataaccess\\clstransactionsdataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_dataaccess\\clsdashboarddataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|solutionrelative:gamepulse_dataaccess\\clsdashboarddataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|D:\\C#\\GamePulse\\GamePulse_DataAccess\\gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|D:\\C#\\GamePulse\\GamePulse_DataAccess\\gamepulse_business\\clsdashboardbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|solutionrelative:gamepulse_business\\clsdashboardbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,38 +26,62 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsTransactionsDataAcc.cs",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsTransactionsDataAcc.cs",
-              "RelativeDocumentMoniker": "GamePulse_DataAccess\\clsTransactionsDataAcc.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsTransactionsDataAcc.cs",
-              "RelativeToolTip": "GamePulse_DataAccess\\clsTransactionsDataAcc.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwEwAAABaAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "frmDashboard.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "GamePulse_Frm\\frmDashboard.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs [Design]*",
+              "RelativeToolTip": "GamePulse_Frm\\frmDashboard.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T19:34:57.482Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-22T22:20:37.418Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "clsTransactionsBus.cs",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsTransactionsBus.cs",
-              "RelativeDocumentMoniker": "GamePulse_Business\\clsTransactionsBus.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsTransactionsBus.cs",
-              "RelativeToolTip": "GamePulse_Business\\clsTransactionsBus.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA4wIcAAAAJAAAAAAAAAA==",
+              "Title": "frmDashboard.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs",
+              "RelativeDocumentMoniker": "GamePulse_Frm\\frmDashboard.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs*",
+              "RelativeToolTip": "GamePulse_Frm\\frmDashboard.cs*",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAwwGsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-21T19:46:54.766Z",
+              "WhenOpened": "2026-01-23T09:27:09.802Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsDashboardDataAcc.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsDashboardDataAcc.cs",
+              "RelativeDocumentMoniker": "GamePulse_DataAccess\\clsDashboardDataAcc.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsDashboardDataAcc.cs",
+              "RelativeToolTip": "GamePulse_DataAccess\\clsDashboardDataAcc.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T12:04:01.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsDashboardBus.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsDashboardBus.cs",
+              "RelativeDocumentMoniker": "GamePulse_Business\\clsDashboardBus.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsDashboardBus.cs",
+              "RelativeToolTip": "GamePulse_Business\\clsDashboardBus.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA8wB4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T09:30:32.496Z",
+              "EditorCaption": ""
             }
           ]
         }

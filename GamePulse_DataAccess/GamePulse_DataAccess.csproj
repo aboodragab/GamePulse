@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCardsDataAcc.cs" />
+    <Compile Include="clsDashboardDataAcc.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsGamesDataAcc.cs" />
     <Compile Include="clsGameTypesDataAcc.cs" />

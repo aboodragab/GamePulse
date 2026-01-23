@@ -1,0 +1,6 @@
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\bin\Debug\GamePulse_DataAccess.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\bin\Debug\GamePulse_DataAccess.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\obj\Debug\GamePulse_DataAccess.csproj.AssemblyReference.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\obj\Debug\GamePulse_DataAccess.csproj.CoreCompileInputs.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\obj\Debug\GamePulse_DataAccess.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_DataAccess\obj\Debug\GamePulse_DataAccess.pdb

@@ -1,0 +1,16 @@
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.csproj.AssemblyReference.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.ctrlMenu.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmDashboard.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Properties.Resources.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.csproj.GenerateResource.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.csproj.CoreCompileInputs.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Frm.exe.config
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Frm.exe
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Frm.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.exe
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Business.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_DataAccess.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Business.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_DataAccess.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePuls.DB50EC3E.Up2Date

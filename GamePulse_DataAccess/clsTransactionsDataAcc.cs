@@ -59,7 +59,7 @@ namespace GamePulse_DataAccess
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-            string sql = "SELECT * FROM vTransactionsDetails ORDER BY TransactionDate DESC";
+            string sql = "SELECT * FROM vTransactionHistory ORDER BY TransactionDate DESC";
             SqlCommand command = new SqlCommand(sql, connection);
 
             try
@@ -69,7 +69,7 @@ namespace GamePulse_DataAccess
                 if (reader.HasRows) dt.Load(reader);
                 reader.Close();
             }
-            catch { }
+            catch(Exception ex) { }
             finally { connection.Close(); }
 
             return dt;

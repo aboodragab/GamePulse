@@ -1,0 +1,10 @@
+D:\C#\GamePulse\GamePulse_DataAccess\test\bin\Debug\test.exe.config
+D:\C#\GamePulse\GamePulse_DataAccess\test\bin\Debug\test.exe
+D:\C#\GamePulse\GamePulse_DataAccess\test\bin\Debug\test.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\test\bin\Debug\GamePulse_DataAccess.dll
+D:\C#\GamePulse\GamePulse_DataAccess\test\bin\Debug\GamePulse_DataAccess.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\test\obj\Debug\test.csproj.AssemblyReference.cache
+D:\C#\GamePulse\GamePulse_DataAccess\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+D:\C#\GamePulse\GamePulse_DataAccess\test\obj\Debug\test.csproj.Up2Date
+D:\C#\GamePulse\GamePulse_DataAccess\test\obj\Debug\test.exe
+D:\C#\GamePulse\GamePulse_DataAccess\test\obj\Debug\test.pdb

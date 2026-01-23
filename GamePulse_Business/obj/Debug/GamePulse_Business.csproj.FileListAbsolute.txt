@@ -1,0 +1,9 @@
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\bin\Debug\GamePulse_Business.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\bin\Debug\GamePulse_Business.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\bin\Debug\GamePulse_DataAccess.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\bin\Debug\GamePulse_DataAccess.pdb
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\obj\Debug\GamePulse_Business.csproj.AssemblyReference.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\obj\Debug\GamePulse_Business.csproj.CoreCompileInputs.cache
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\obj\Debug\GamePuls.30D66D2C.Up2Date
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\obj\Debug\GamePulse_Business.dll
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Business\obj\Debug\GamePulse_Business.pdb
