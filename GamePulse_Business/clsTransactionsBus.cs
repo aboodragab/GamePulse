@@ -17,22 +17,22 @@ namespace GamePulse_Business
             Refund = 3,
             CashOut = 4
         }
+
         public int TransactionID { get; set; }
-        public decimal ActualAmount { get; set; } 
+        public decimal ActualAmount { get; set; }
         public DateTime? TransactionDate { get; set; }
-        public decimal BalanceAmount { get; set; } 
-        public decimal? GamePrice { get; set; } 
+        public decimal BalanceAmount { get; set; }
+        public decimal? GamePrice { get; set; }
         public int? GameID { get; set; }
         public int CardID { get; set; }
         public int CreatedByUserID { get; set; }
         public int? OfferID { get; set; }
         public int TransactionTypeID { get; set; }
 
-
         public clsCardsBus CardInfo { get; set; }
         public clsUsersBus UserInfo { get; set; }
         public clsTransactionTypesBus TypeInfo { get; set; }
-        public clsGamesBus GameInfo { get; set; } 
+        public clsGamesBus GameInfo { get; set; }
         public clsOffersBus OfferInfo { get; set; }
 
         private clsTransactionsBus(
@@ -65,118 +65,114 @@ namespace GamePulse_Business
             OfferInfo = offerID.HasValue ? clsOffersBus.Find(offerID.Value) : null;
         }
 
-
-        private static bool UpdateCardBalance(clsCardsBus card, decimal newBalance)
+        private static bool _UpdateCardBalance(clsCardsBus card, decimal newBalance)
         {
             card.Balance = newBalance;
             return card.Save();
         }
+
         public static bool RechargeCard(int CardID, decimal Amount, int UserID, int? OfferID)
         {
             if (Amount <= 0) return false;
 
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
-            
             if (Card == null || !Card.IsActive) return false;
 
-            decimal TotalToBenefit = Amount;
-
+            decimal Bonus = 0;
             if (OfferID.HasValue)
             {
                 clsOffersBus offer = clsOffersBus.Find(OfferID.Value);
-
-                if (offer != null && offer.IsActive)
-                {
-                    TotalToBenefit = Amount + offer.CreditAmount;
-                }
+                if (offer != null && offer.IsActive) Bonus = offer.CreditAmount;
             }
 
-            decimal NewBalance = Card.Balance + TotalToBenefit;
-            int TransactionID = clsTransactionsDataAcc.AddRechargeTransaction(Amount, NewBalance, CardID, UserID, OfferID,(int)enTransactionType.Recharge);
+            decimal CalculatedBalanceAfterAction = Card.Balance + Amount + Bonus;
 
-            if (TransactionID == -1)
-            {
-               return false;
-            }
+            int TransactionID = clsTransactionsDataAcc.AddRechargeTransaction(
+                Amount,
+                CalculatedBalanceAfterAction,
+                CardID,
+                UserID,
+                OfferID,
+                (int)enTransactionType.Recharge);
 
-            return UpdateCardBalance(Card, NewBalance);
-            
+            if (TransactionID == -1) return false;
+
+            return _UpdateCardBalance(Card, CalculatedBalanceAfterAction);
         }
+
         public static bool PlayCard(int CardID, decimal Amount, int UserID, int GameID)
         {
             if (Amount <= 0) return false;
-            clsCardsBus Card = clsCardsBus.FindByID(CardID);
-            if (Card == null || !Card.IsActive) return false;
 
-            if (Card.Balance < Amount)
-            {
-                return false;
-            }
-            
-            decimal NewBalance = Card.Balance - Amount;
+            clsCardsBus Card = clsCardsBus.FindByID(CardID);
+            if (Card == null || !Card.IsActive || Card.Balance < Amount) return false;
+
+            decimal CalculatedBalanceAfterAction = Card.Balance - Amount;
 
             int TransactionID = clsTransactionsDataAcc.AddPlayTransaction(
-                NewBalance,
-                Amount,     
+                CalculatedBalanceAfterAction,
+                Amount,
                 GameID,
                 CardID,
                 UserID,
                 (int)enTransactionType.Play);
 
-            if (TransactionID == -1)
-            {
-                return false;
-            }
+            if (TransactionID == -1) return false;
 
-            return UpdateCardBalance(Card, NewBalance);
+            return _UpdateCardBalance(Card, CalculatedBalanceAfterAction);
         }
+
         public static bool Refund(int CardID, decimal RefundAmount, int UserID)
         {
             if (RefundAmount <= 0 || CardID <= 0) return false;
-            clsCardsBus Card = clsCardsBus.FindByID(CardID);
 
+            clsCardsBus Card = clsCardsBus.FindByID(CardID);
             if (Card == null || !Card.IsActive) return false;
-            decimal NewBalance = Card.Balance + RefundAmount;
-            
+
+            decimal CalculatedBalanceAfterAction = Card.Balance + RefundAmount;
+
             int TransactionID = clsTransactionsDataAcc.AddRefundTransaction(
                 RefundAmount,
-                NewBalance,
+                CalculatedBalanceAfterAction,
                 CardID,
                 UserID,
                 (int)enTransactionType.Refund
             );
-            if (TransactionID == -1)
-            {
-                return false;
-            }
 
-            return UpdateCardBalance(Card, NewBalance);
+            if (TransactionID == -1) return false;
+
+            return _UpdateCardBalance(Card, CalculatedBalanceAfterAction);
         }
+
         public static bool CashOut(int CardID, decimal Amount, int UserID)
         {
             if (Amount <= 0) return false;
+
             clsCardsBus Card = clsCardsBus.FindByID(CardID);
             if (Card == null || !Card.IsActive || Card.Balance < Amount) return false;
 
-            decimal NewBalance = Card.Balance - Amount; 
+            decimal CalculatedBalanceAfterAction = Card.Balance - Amount;
 
-            
             int TransactionID = clsTransactionsDataAcc.AddRefundTransaction(
-                Amount, NewBalance, CardID, UserID, (int)enTransactionType.CashOut);
-            if (TransactionID == -1)
-            {
-                return false;
-            }
+                Amount,
+                CalculatedBalanceAfterAction,
+                CardID,
+                UserID,
+                (int)enTransactionType.CashOut);
 
-            return UpdateCardBalance(Card, NewBalance);
+            if (TransactionID == -1) return false;
+
+            return _UpdateCardBalance(Card, CalculatedBalanceAfterAction);
         }
+
         public static DataTable GetAllTransactions()
         {
             return clsTransactionsDataAcc.GetAllTransactionsList();
         }
+
         public static DataTable GetSalesInventory(DateTime FromDate, DateTime ToDate)
         {
-            return clsTransactionsDataAcc.GetSalesInventoryReport(FromDate,ToDate);
+            return clsTransactionsDataAcc.GetSalesInventoryReport(FromDate, ToDate);
         }
     }
 }
