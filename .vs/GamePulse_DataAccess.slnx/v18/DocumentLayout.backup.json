@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_frm\\frmcreatecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmcreatecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_dataaccess\\clsdashboarddataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9E105E5-86F8-4059-9FCA-8233BED4E9D7}|GamePulse_DataAccess\\GamePulse_DataAccess.csproj|solutionrelative:gamepulse_dataaccess\\clsdashboarddataacc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_business\\clscardsbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|solutionrelative:gamepulse_business\\clscardsbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|D:\\C#\\GamePulse\\GamePulse_DataAccess\\gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_frm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|D:\\C#\\GamePulse\\GamePulse_DataAccess\\gamepulse_business\\clsdashboardbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{107CE538-7088-433B-912F-3192B24C5788}|GamePulse_Business\\GamePulse_Business.csproj|solutionrelative:gamepulse_business\\clsdashboardbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|d:\\c#\\gamepulse\\gamepulse_dataaccess\\gamepulse_frm\\frmcardmanagrement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{734B1519-4E63-4613-ABDB-27DF1C204093}|GamePulse_Frm\\GamePulse_Frm.csproj|solutionrelative:gamepulse_frm\\frmcardmanagrement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,53 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmDashboard.cs [Design]",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "GamePulse_Frm\\frmDashboard.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs [Design]*",
-              "RelativeToolTip": "GamePulse_Frm\\frmDashboard.cs [Design]*",
+              "DocumentIndex": 1,
+              "Title": "clsCardsBus.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsCardsBus.cs",
+              "RelativeDocumentMoniker": "GamePulse_Business\\clsCardsBus.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsCardsBus.cs",
+              "RelativeToolTip": "GamePulse_Business\\clsCardsBus.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwEAAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-22T22:20:37.418Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmDashboard.cs",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs",
-              "RelativeDocumentMoniker": "GamePulse_Frm\\frmDashboard.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmDashboard.cs*",
-              "RelativeToolTip": "GamePulse_Frm\\frmDashboard.cs*",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwGsAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:27:09.802Z",
+              "WhenOpened": "2026-01-26T19:54:08.142Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsDashboardDataAcc.cs",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsDashboardDataAcc.cs",
-              "RelativeDocumentMoniker": "GamePulse_DataAccess\\clsDashboardDataAcc.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_DataAccess\\clsDashboardDataAcc.cs",
-              "RelativeToolTip": "GamePulse_DataAccess\\clsDashboardDataAcc.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmCreateCard.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmCreateCard.cs",
+              "RelativeDocumentMoniker": "GamePulse_Frm\\frmCreateCard.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmCreateCard.cs",
+              "RelativeToolTip": "GamePulse_Frm\\frmCreateCard.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T12:04:01.65Z",
+              "WhenOpened": "2026-01-26T18:40:51.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "clsDashboardBus.cs",
-              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsDashboardBus.cs",
-              "RelativeDocumentMoniker": "GamePulse_Business\\clsDashboardBus.cs",
-              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Business\\clsDashboardBus.cs",
-              "RelativeToolTip": "GamePulse_Business\\clsDashboardBus.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA8wB4AAAAqAAAAAAAAAA==",
+              "Title": "frmCardManagrement.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmCardManagrement.cs",
+              "RelativeDocumentMoniker": "GamePulse_Frm\\frmCardManagrement.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\frmCardManagrement.cs",
+              "RelativeToolTip": "GamePulse_Frm\\frmCardManagrement.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwv2oAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T09:30:32.496Z",
+              "WhenOpened": "2026-01-26T19:48:14.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\Program.cs",
+              "RelativeDocumentMoniker": "GamePulse_Frm\\Program.cs",
+              "ToolTip": "D:\\C#\\GamePulse\\GamePulse_DataAccess\\GamePulse_Frm\\Program.cs",
+              "RelativeToolTip": "GamePulse_Frm\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-26T19:46:05.376Z",
               "EditorCaption": ""
             }
           ]

@@ -13,6 +13,8 @@ namespace GamePulse_Business
         public float TotalRevenue { get; set; }
         public int ActiveCards { get; set; }
         public int TodayPlays { get; set; }
+        public float ActualAmount {  get; set; }
+        public string TypeName { get; set; }
 
         public static clsDashboardBus GetStats()
         {
@@ -24,6 +26,19 @@ namespace GamePulse_Business
                     TotalRevenue = Convert.ToSingle(row["TotalRevenue"]),
                     ActiveCards = Convert.ToInt32(row["ActiveCards"]),
                     TodayPlays = Convert.ToInt32(row["TodayPlays"])
+                };
+            }
+            return null;
+        }
+        public static clsDashboardBus GetLast()
+        {
+            DataRow row = clsDashboardDataAcc.GetLastTransaction();
+            if(row != null)
+            {
+                return new clsDashboardBus()
+                {
+                    ActualAmount = Convert.ToSingle(row["ActualAmount"]),
+                    TypeName = row["TypeName"].ToString()
                 };
             }
             return null;

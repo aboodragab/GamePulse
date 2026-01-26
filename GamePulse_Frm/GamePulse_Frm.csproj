@@ -46,11 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsUtil.cs" />
     <Compile Include="ctrlMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ctrlMenu.Designer.cs">
       <DependentUpon>ctrlMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCardManagrement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCardManagrement.Designer.cs">
+      <DependentUpon>frmCardManagrement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateCard.Designer.cs">
+      <DependentUpon>frmCreateCard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
@@ -58,13 +71,28 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ctrlMenu.resx">
       <DependentUpon>ctrlMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCardManagrement.resx">
+      <DependentUpon>frmCardManagrement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateCard.resx">
+      <DependentUpon>frmCreateCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

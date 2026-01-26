@@ -14,3 +14,6 @@ D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_DataAcces
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_Business.pdb
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\bin\Debug\GamePulse_DataAccess.pdb
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePuls.DB50EC3E.Up2Date
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmCardManagrement.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmCreateCard.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmLogin.resources

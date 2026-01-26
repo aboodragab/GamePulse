@@ -41,6 +41,32 @@ namespace GamePulse_DataAccess
             return (dt.Rows.Count > 0) ? dt.Rows[0] : null;
         }
 
+        public static DataRow GetLastTransaction()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString))
+            {
+                string query = @"SELECT TOP 1 T.TypeName, Tr.ActualAmount
+                        FROM Transactions Tr 
+                        INNER JOIN TransactionTypes T ON Tr.TransactionTypeID = T.TransactionTypeID
+                        ORDER BY Tr.TransactionID DESC;";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows) dt.Load(reader);
+                        }
+                    }
+                    catch (Exception) {  }
+                }
+            }
+            return (dt.Rows.Count > 0) ? dt.Rows[0] : null;
+        }
+
         public static DataTable GetLast50()
         {
             DataTable dt = new DataTable();

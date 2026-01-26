@@ -87,6 +87,12 @@ namespace GamePulse_Frm
                 lblActiveCards.Text = stats.ActiveCards.ToString() + " Cards";
                 lblTodayPlays.Text = stats.TodayPlays.ToString() + " Plays";
             }
+            var last = clsDashboardBus.GetLast();
+            if (last != null)
+            {
+                lblTypeName.Text = last.TypeName;
+                lblActualAmount.Text = last.ActualAmount.ToString("C");
+            }
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -94,35 +100,20 @@ namespace GamePulse_Frm
         }
         private void _RefreshAllDashboardData()
         {
-            int lastSelectedID = -1;
-            int scrollIndex = dgvTransactions.FirstDisplayedScrollingRowIndex;
-
-            if (dgvTransactions.SelectedRows.Count > 0)
-            {
-                lastSelectedID = (int)dgvTransactions.SelectedRows[0].Cells["TransactionID"].Value;
-            }
             dt = clsDashboardBus.GetTop50();
             dgvTransactions.DataSource = dt;
             _FormatTransactionsGrid();
             _RefreshDashboardStats();
-            dgvTransactions.ClearSelection();
-            if (lastSelectedID != -1)
-            {
-                foreach (DataGridViewRow row in dgvTransactions.Rows)
-                {
-                    if ((int)row.Cells["TransactionID"].Value == lastSelectedID)
-                    {
-                        row.Selected = true;
-                        if (scrollIndex >= 0 && scrollIndex < dgvTransactions.RowCount)
-                            dgvTransactions.FirstDisplayedScrollingRowIndex = scrollIndex;
-                        break;
-                    }
-                }
-            }
         }
         private void timerDashboardRefresh_Tick(object sender, EventArgs e)
         {
             _RefreshAllDashboardData();
+        }
+
+        private void btnCardManagement_Click(object sender, EventArgs e)
+        {
+            frmCardManagrement cardManagrement = new frmCardManagrement();
+            cardManagrement.ShowDialog();
         }
     }
 }

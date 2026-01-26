@@ -79,7 +79,7 @@ namespace GamePulse_Business
             if (Card == null || !Card.IsActive) return false;
 
             decimal Bonus = 0;
-            if (OfferID.HasValue)
+            if (OfferID.HasValue)  
             {
                 clsOffersBus offer = clsOffersBus.Find(OfferID.Value);
                 if (offer != null && offer.IsActive) Bonus = offer.CreditAmount;
