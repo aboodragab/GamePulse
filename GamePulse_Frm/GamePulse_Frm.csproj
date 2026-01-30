@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
     <Compile Include="ctrlMenu.cs">
       <SubType>UserControl</SubType>

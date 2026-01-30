@@ -75,6 +75,19 @@ namespace GamePulse_Business
             return null;
         }
 
+        public static clsUsersBus FindByUserNameAndPassword(string Username,string password)
+        {
+            int id = 0;
+            string name = "";
+            bool isActive = false;
+            byte RoleID = 0;
+
+            if (clsUsersDataAcc.FindByUserAndPassword(Username, password, ref id, ref name, ref isActive, ref RoleID))
+                return new clsUsersBus(id, name, Username, password, isActive, RoleID);
+            else
+                return null;
+        }
+
         private bool AddUser()
         {
             UserID=clsUsersDataAcc.AddUser(FullName,UserName,Password,IsActive,RoleID);

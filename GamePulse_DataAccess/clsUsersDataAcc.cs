@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -129,7 +130,7 @@ namespace GamePulse_DataAccess
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-                    RoleID = (byte)reader["RoleID"];
+                    RoleID = Convert.ToByte(reader["RoleID"]);
                 }
                 reader.Close();
             }
@@ -160,13 +161,48 @@ namespace GamePulse_DataAccess
                     FullName = (string)reader["FullName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-                    RoleID = (byte)reader["RoleID"];
+                    RoleID = Convert.ToByte(reader["RoleID"]);
                 }
                 reader.Close();
             }
-            catch (Exception ex) { isFound = false; }
+            catch (Exception ex) 
+            { isFound = false; }
             finally { connection.Close(); }
 
+            return isFound;
+        }
+
+        public static bool FindByUserAndPassword(string UserName,string Password ,ref int UserID, ref string FullName,
+             ref bool IsActive, ref byte RoleID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+            string sql = "SELECT * FROM Users WHERE UserName=@UserName and Password=@Password";
+
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@UserName", UserName);
+            command.Parameters.AddWithValue("@Password", Password);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    isFound = true;
+                    UserID = (int)reader["UserID"];
+                    FullName = (string)reader["FullName"];
+                    IsActive = (bool)reader["IsActive"];
+                    RoleID = Convert.ToByte(reader["RoleID"]);
+                }
+                reader.Close();
+            }
+            catch(Exception ex) 
+            { 
+                isFound = false;
+            }
+            finally{ connection.Close(); }
             return isFound;
         }
 

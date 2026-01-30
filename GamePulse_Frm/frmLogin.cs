@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GamePulse_Business;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,28 @@ namespace GamePulse_Frm
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+            clsUsersBus user = clsUsersBus.FindByUserNameAndPassword(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+            if (user != null)
+            {
+                if (!user.IsActive)
+                {
+
+                    txtUsername.Focus();
+                    MessageBox.Show("Your accound is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                clsGlobal.CurrentUser = user;
+                this.Hide();
+                frmDashboard dashboard = new frmDashboard();
+                dashboard.ShowDialog();
+
+            }
+            else
+            {
+                txtUsername.Focus();
+                MessageBox.Show("Invalid Username/Password.", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

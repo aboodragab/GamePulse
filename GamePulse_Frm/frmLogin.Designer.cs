@@ -116,10 +116,11 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPassword.Location = new System.Drawing.Point(45, 406);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassword.Multiline = true;
+            this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(360, 44);
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.Size = new System.Drawing.Size(360, 30);
             this.txtPassword.TabIndex = 6;
             // 
             // btnSignIn
