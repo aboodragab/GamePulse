@@ -212,5 +212,31 @@ namespace GamePulse_DataAccess
 
             return dt;
         }
+
+        public static bool UpdateActiveStatus(int CardID, bool isActive)
+        {
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+            string sql = @"UPDATE Cards SET isActive = @isActive WHERE CardID = @CardID";
+
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@CardID", CardID);
+            command.Parameters.AddWithValue("@isActive", isActive);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return rowsAffected > 0;
+        }
     }
 }

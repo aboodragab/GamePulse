@@ -66,7 +66,7 @@ namespace GamePulse_Frm
                 if (dgvCards.Columns.Contains("Balance"))
                 {
                     dgvCards.Columns["Balance"].HeaderText = "Balance";
-                    dgvCards.Columns["Balance"].DefaultCellStyle.Format = "C2"; 
+                    dgvCards.Columns["Balance"].DefaultCellStyle.Format = "C2";
                     dgvCards.Columns["Balance"].DefaultCellStyle.ForeColor = Color.Blue;
                 }
 
@@ -123,5 +123,53 @@ namespace GamePulse_Frm
             frmRechargeCard rechargeCard = new frmRechargeCard((int)dgvCards.CurrentRow.Cells[0].Value);
             rechargeCard.ShowDialog();
         }
+
+        private void avtiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int cardid = (int)dgvCards.CurrentRow.Cells[0].Value;
+            if (clsCardsBus.ActiveCard(cardid))
+            {
+                MessageBox.Show("Card has been activated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _FormatCardsGrid();
+            }
+            else
+            {
+                MessageBox.Show("Failed to activate the card.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void blockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int cardid = (int)dgvCards.CurrentRow.Cells[0].Value;
+            if (clsCardsBus.BlockCard(cardid))
+            {
+                MessageBox.Show("Card has been blocked successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _FormatCardsGrid();
+            }
+            else
+            {
+                MessageBox.Show("Failed to block the card.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            string currentStatus = dgvCards.CurrentRow.Cells["Status"].Value.ToString();
+            if (currentStatus == "Active")
+            {
+                avtiveToolStripMenuItem.Enabled = false;
+                blockToolStripMenuItem.Enabled = true;
+                rechargeToolStripMenuItem.Enabled = true;
+            }
+            else 
+            {
+                avtiveToolStripMenuItem.Enabled = true;
+                blockToolStripMenuItem.Enabled = false;
+                rechargeToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        
     }
 }

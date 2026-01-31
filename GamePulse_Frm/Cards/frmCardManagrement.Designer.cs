@@ -52,6 +52,8 @@
             this.tmsShowInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.rechargeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreateCard = new System.Windows.Forms.Button();
+            this.avtiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogoSection.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -306,9 +308,12 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tmsShowInfo,
-            this.rechargeToolStripMenuItem});
+            this.rechargeToolStripMenuItem,
+            this.avtiveToolStripMenuItem,
+            this.blockToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 165);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // tmsShowInfo
             // 
@@ -341,6 +346,20 @@
             this.btnCreateCard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCreateCard.UseVisualStyleBackColor = false;
             this.btnCreateCard.Click += new System.EventHandler(this.btnCreateCard_Click);
+            // 
+            // avtiveToolStripMenuItem
+            // 
+            this.avtiveToolStripMenuItem.Name = "avtiveToolStripMenuItem";
+            this.avtiveToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.avtiveToolStripMenuItem.Text = "Active";
+            this.avtiveToolStripMenuItem.Click += new System.EventHandler(this.avtiveToolStripMenuItem_Click);
+            // 
+            // blockToolStripMenuItem
+            // 
+            this.blockToolStripMenuItem.Name = "blockToolStripMenuItem";
+            this.blockToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.blockToolStripMenuItem.Text = "Block";
+            this.blockToolStripMenuItem.Click += new System.EventHandler(this.blockToolStripMenuItem_Click);
             // 
             // frmCardManagrement
             // 
@@ -385,5 +404,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tmsShowInfo;
         private System.Windows.Forms.ToolStripMenuItem rechargeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem avtiveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blockToolStripMenuItem;
     }
 }

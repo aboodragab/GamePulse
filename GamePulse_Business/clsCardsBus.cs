@@ -116,6 +116,13 @@ namespace GamePulse_Business
         {
             return clsCardsDataAcc.GetAllCards(); 
         }
-
+        public static bool ActiveCard(int cardID)
+        {
+            return clsCardsDataAcc.UpdateActiveStatus(cardID, true);
+        }
+        public static bool BlockCard(int cardID)
+        {
+            return clsCardsDataAcc.UpdateActiveStatus(cardID, false);
+        }
     }
 }
