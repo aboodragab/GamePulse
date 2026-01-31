@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.ctrlGamesInfo1 = new GamePulse_Frm.Games.ctrlGamesInfo();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,15 +38,9 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlGamesInfo1 = new GamePulse_Frm.Games.ctrlGamesInfo();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlGamesInfo1
-            // 
-            this.ctrlGamesInfo1.Location = new System.Drawing.Point(-2, 173);
-            this.ctrlGamesInfo1.Name = "ctrlGamesInfo1";
-            this.ctrlGamesInfo1.Size = new System.Drawing.Size(580, 250);
-            this.ctrlGamesInfo1.TabIndex = 0;
             // 
             // label1
             // 
@@ -85,6 +78,7 @@
             this.txtGameName.Name = "txtGameName";
             this.txtGameName.Size = new System.Drawing.Size(118, 26);
             this.txtGameName.TabIndex = 3;
+            this.txtGameName.Validating += new System.ComponentModel.CancelEventHandler(this.txtGameName_Validating);
             // 
             // txtPrice
             // 
@@ -92,6 +86,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(118, 26);
             this.txtPrice.TabIndex = 4;
+            this.txtPrice.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrice_Validating);
             // 
             // cmbGameType
             // 
@@ -125,6 +120,13 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // ctrlGamesInfo1
+            // 
+            this.ctrlGamesInfo1.Location = new System.Drawing.Point(-2, 173);
+            this.ctrlGamesInfo1.Name = "ctrlGamesInfo1";
+            this.ctrlGamesInfo1.Size = new System.Drawing.Size(580, 250);
+            this.ctrlGamesInfo1.TabIndex = 0;
             // 
             // frmAddUpdateGame
             // 

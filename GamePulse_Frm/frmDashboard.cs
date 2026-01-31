@@ -125,5 +125,12 @@ namespace GamePulse_Frm
             this.Close();
 
         }
+
+        private void btnOffer_Click(object sender, EventArgs e)
+        {
+            frmOfferMangment frmOffer = new frmOfferMangment();
+            frmOffer.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -24,3 +24,5 @@ D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.ctrlGamesInfo.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmGameInfo.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmAddUpdateGame.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmOfferMangment.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.offer.frmAddUpdateOfer.resources

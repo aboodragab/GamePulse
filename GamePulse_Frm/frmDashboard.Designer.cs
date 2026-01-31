@@ -175,6 +175,7 @@
             this.btnOffer.Text = " 🚀  Offer Blast ";
             this.btnOffer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOffer.UseVisualStyleBackColor = false;
+            this.btnOffer.Click += new System.EventHandler(this.btnOffer_Click);
             // 
             // btnLogout
             // 
@@ -341,7 +342,7 @@
             this.panel4.Location = new System.Drawing.Point(4, 5);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(307, 139);
+            this.panel4.Size = new System.Drawing.Size(306, 139);
             this.panel4.TabIndex = 0;
             // 
             // lblTotalRevenue
@@ -372,7 +373,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.lblActiveCards);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(319, 5);
+            this.panel5.Location = new System.Drawing.Point(318, 5);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(314, 139);
@@ -406,7 +407,7 @@
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.lblTodayPlays);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(644, 5);
+            this.panel6.Location = new System.Drawing.Point(643, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(314, 139);
@@ -440,7 +441,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.18033F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.81967F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 329F));
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);

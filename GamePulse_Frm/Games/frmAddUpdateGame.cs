@@ -74,31 +74,9 @@ namespace GamePulse_Frm.Games
                 _LodeData();
             }
         }
-        private bool _ValidateInputs()
-        {
-            bool IsValid = true;
-
-            if (string.IsNullOrWhiteSpace(txtGameName.Text))
-            {
-                errorProvider1.SetError(txtGameName, "Game Name is required!");
-                IsValid = false;
-            }
-            else
-                errorProvider1.SetError(txtGameName, "");
-
-            if (string.IsNullOrWhiteSpace(txtPrice.Text))
-            {
-                errorProvider1.SetError(txtPrice, "Price is required!");
-                IsValid = false;
-            }
-            else
-                errorProvider1.SetError(txtPrice, "");
-
-            return IsValid;
-        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtGameName.Text) || string.IsNullOrEmpty(txtPrice.Text))
+            if (!ValidateChildren())
             {
                 MessageBox.Show("Please fill all required fields!", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -128,5 +106,28 @@ namespace GamePulse_Frm.Games
 
         }
 
+        private void txtPrice_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPrice.Text))
+            {
+                e.Cancel = true; 
+                errorProvider1.SetError(txtPrice, "Price is required!");
+            }
+            if(!clsUtil.IsValidDecimal(txtPrice.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPrice, "Invalid Price! Please enter a numeric value (e.g., 10 or 10.50).");
+            }
+        }
+
+        private void txtGameName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtGameName.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtGameName, "Name is required!");
+            }
+        }
     }
-}
+    }
+

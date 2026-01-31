@@ -94,7 +94,7 @@ namespace GamePulse_DataAccess
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-            string sql = "SELECT * FROM Offers";
+            string sql = "select * from vOfferDetails";
             SqlCommand command = new SqlCommand(sql, connection);
 
             try
@@ -123,6 +123,30 @@ namespace GamePulse_DataAccess
                 rowsAffected = command.ExecuteNonQuery();
             }
             catch (Exception ex) { }
+            finally { connection.Close(); }
+
+            return rowsAffected > 0;
+        }
+
+        public static bool UpdateOfferStatus(int OfferID, bool NewStatus)
+        {
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+            string sql = @"UPDATE Offers SET isActive = @NewStatus WHERE OfferID = @OfferID";
+
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@OfferID", OfferID);
+            command.Parameters.AddWithValue("@NewStatus", NewStatus);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                
+            }
             finally { connection.Close(); }
 
             return rowsAffected > 0;

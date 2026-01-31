@@ -96,6 +96,18 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="offer\frmAddUpdateOfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="offer\frmAddUpdateOfer.Designer.cs">
+      <DependentUpon>frmAddUpdateOfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="offer\frmOfferMangment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="offer\frmOfferMangment.Designer.cs">
+      <DependentUpon>frmOfferMangment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\ctrlGamesInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,6 +170,12 @@
     <EmbeddedResource Include="Games\frmGameManagment.resx">
       <DependentUpon>frmGameManagment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="offer\frmAddUpdateOfer.resx">
+      <DependentUpon>frmAddUpdateOfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="offer\frmOfferMangment.resx">
+      <DependentUpon>frmOfferMangment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -198,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\games_control.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offer_bullet3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

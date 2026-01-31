@@ -87,6 +87,14 @@ namespace GamePulse_Business
             }
             return false;
         }
+        public static bool Active(int OfferID)
+        {
+            return clsOffersDataAcc.UpdateOfferStatus(OfferID, true);
+        }
+        public static bool Block(int OfferID)
+        {
+            return clsOffersDataAcc.UpdateOfferStatus(OfferID, false);
+        }
 
     }
 
