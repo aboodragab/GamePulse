@@ -170,6 +170,9 @@ namespace GamePulse_Frm
             }
         }
 
-        
+        private void dgvCards_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

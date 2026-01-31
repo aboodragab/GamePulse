@@ -96,6 +96,24 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\ctrlGamesInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Games\ctrlGamesInfo.Designer.cs">
+      <DependentUpon>ctrlGamesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\frmGameInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Games\frmGameInfo.Designer.cs">
+      <DependentUpon>frmGameInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Games\frmGameManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Games\frmGameManagment.Designer.cs">
+      <DependentUpon>frmGameManagment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cards\ctrlCardInfo.resx">
@@ -121,6 +139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\ctrlGamesInfo.resx">
+      <DependentUpon>ctrlGamesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\frmGameInfo.resx">
+      <DependentUpon>frmGameInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\frmGameManagment.resx">
+      <DependentUpon>frmGameManagment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,6 +186,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sort_by_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\games_control.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

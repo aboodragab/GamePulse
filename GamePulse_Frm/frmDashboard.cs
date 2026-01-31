@@ -1,4 +1,5 @@
 ﻿using GamePulse_Business;
+using GamePulse_Frm.Games;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -115,6 +116,14 @@ namespace GamePulse_Frm
             frmCardManagrement cardManagrement = new frmCardManagrement();
             cardManagrement.ShowDialog();
             this.Close();
+        }
+
+        private void btnGameManagement_Click(object sender, EventArgs e)
+        {
+            frmGameManagment frmGameManagment = new frmGameManagment();
+            frmGameManagment.ShowDialog();
+            this.Close();
+
         }
     }
 }

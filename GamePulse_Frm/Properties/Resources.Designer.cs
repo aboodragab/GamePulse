@@ -83,6 +83,16 @@ namespace GamePulse_Frm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap games_control {
+            get {
+                object obj = ResourceManager.GetObject("games_control", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sort_by_status {
             get {
                 object obj = ResourceManager.GetObject("sort_by_status", resourceCulture);

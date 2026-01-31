@@ -20,3 +20,6 @@ D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmLo
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.ctrlCardInfo.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.frmCardInfo.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.frmRechargeCard.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmGameManagment.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.ctrlGamesInfo.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmGameInfo.resources

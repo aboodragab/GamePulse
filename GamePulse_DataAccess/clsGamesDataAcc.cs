@@ -113,7 +113,7 @@ namespace GamePulse_DataAccess
         {
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
-            string sql = "SELECT * FROM vGamesDetails";
+            string sql = "SELECT * FROM vGameDetails";
             SqlCommand command = new SqlCommand(sql, connection);
 
             try

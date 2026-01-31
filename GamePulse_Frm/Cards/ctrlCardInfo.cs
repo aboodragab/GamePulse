@@ -18,6 +18,10 @@ namespace GamePulse_Frm.Cards
             InitializeComponent();
         }
         private clsCardsBus _Card;
+        public int CardID
+        {
+            get { return (_Card == null) ? -1 : _Card.CardID; }
+        }
         public void LoadCardData(int CardID)
         {
             _Card = clsCardsBus.FindByID(CardID);
@@ -33,5 +37,14 @@ namespace GamePulse_Frm.Cards
             lblStatus.Text = _Card.IsActive ? "Active" : "Blocked";
             lblStatus.ForeColor = _Card.IsActive ? Color.Green : Color.Red;
         }
+        public void ResetCardInfo()
+        {
+            _Card = null;
+            lblCardUID.Text = "[???]";
+            lblBalance.Text = "[???]";
+            lblStatus.Text = "[???]";
+            lblStatus.ForeColor = Color.Black;
+        }
     }
+
 }

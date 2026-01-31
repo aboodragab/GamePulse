@@ -33,10 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnOffer = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.btnTransactions = new System.Windows.Forms.Button();
-            this.btnPlayDeduction = new System.Windows.Forms.Button();
             this.btnGameManagement = new System.Windows.Forms.Button();
             this.btnCardManagement = new System.Windows.Forms.Button();
             this.pnlLogoSection = new System.Windows.Forms.Panel();
@@ -95,10 +96,11 @@
             // pnlSidebar
             // 
             this.pnlSidebar.BackColor = System.Drawing.Color.White;
+            this.pnlSidebar.Controls.Add(this.button3);
+            this.pnlSidebar.Controls.Add(this.button2);
+            this.pnlSidebar.Controls.Add(this.button1);
+            this.pnlSidebar.Controls.Add(this.btnOffer);
             this.pnlSidebar.Controls.Add(this.btnLogout);
-            this.pnlSidebar.Controls.Add(this.btnReports);
-            this.pnlSidebar.Controls.Add(this.btnTransactions);
-            this.pnlSidebar.Controls.Add(this.btnPlayDeduction);
             this.pnlSidebar.Controls.Add(this.btnGameManagement);
             this.pnlSidebar.Controls.Add(this.btnCardManagement);
             this.pnlSidebar.Controls.Add(this.btnDashboard);
@@ -109,6 +111,70 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(315, 678);
             this.pnlSidebar.TabIndex = 2;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.button3.Location = new System.Drawing.Point(0, 484);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(315, 62);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "  📈   Reports";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.button2.Location = new System.Drawing.Point(0, 422);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(315, 62);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "  🧾   Transactions";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.button1.Location = new System.Drawing.Point(0, 360);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(315, 62);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "  ▶️   Play / Deduction";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnOffer
+            // 
+            this.btnOffer.BackColor = System.Drawing.Color.White;
+            this.btnOffer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOffer.FlatAppearance.BorderSize = 0;
+            this.btnOffer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOffer.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btnOffer.Location = new System.Drawing.Point(0, 298);
+            this.btnOffer.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.btnOffer.Name = "btnOffer";
+            this.btnOffer.Size = new System.Drawing.Size(315, 62);
+            this.btnOffer.TabIndex = 9;
+            this.btnOffer.Text = " 🚀  Offer Blast ";
+            this.btnOffer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOffer.UseVisualStyleBackColor = false;
             // 
             // btnLogout
             // 
@@ -126,54 +192,6 @@
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.White;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnReports.Location = new System.Drawing.Point(0, 422);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(315, 62);
-            this.btnReports.TabIndex = 1;
-            this.btnReports.Text = "  📈   Reports";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
-            // 
-            // btnTransactions
-            // 
-            this.btnTransactions.BackColor = System.Drawing.Color.White;
-            this.btnTransactions.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTransactions.FlatAppearance.BorderSize = 0;
-            this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnTransactions.Location = new System.Drawing.Point(0, 360);
-            this.btnTransactions.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnTransactions.Name = "btnTransactions";
-            this.btnTransactions.Size = new System.Drawing.Size(315, 62);
-            this.btnTransactions.TabIndex = 3;
-            this.btnTransactions.Text = "  🧾   Transactions";
-            this.btnTransactions.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransactions.UseVisualStyleBackColor = false;
-            // 
-            // btnPlayDeduction
-            // 
-            this.btnPlayDeduction.BackColor = System.Drawing.Color.White;
-            this.btnPlayDeduction.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPlayDeduction.FlatAppearance.BorderSize = 0;
-            this.btnPlayDeduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayDeduction.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnPlayDeduction.Location = new System.Drawing.Point(0, 298);
-            this.btnPlayDeduction.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnPlayDeduction.Name = "btnPlayDeduction";
-            this.btnPlayDeduction.Size = new System.Drawing.Size(315, 62);
-            this.btnPlayDeduction.TabIndex = 3;
-            this.btnPlayDeduction.Text = "  ▶️   Play / Deduction";
-            this.btnPlayDeduction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlayDeduction.UseVisualStyleBackColor = false;
-            // 
             // btnGameManagement
             // 
             this.btnGameManagement.BackColor = System.Drawing.Color.White;
@@ -189,6 +207,7 @@
             this.btnGameManagement.Text = "  🎮   Game Management";
             this.btnGameManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGameManagement.UseVisualStyleBackColor = false;
+            this.btnGameManagement.Click += new System.EventHandler(this.btnGameManagement_Click);
             // 
             // btnCardManagement
             // 
@@ -322,7 +341,7 @@
             this.panel4.Location = new System.Drawing.Point(4, 5);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(308, 139);
+            this.panel4.Size = new System.Drawing.Size(307, 139);
             this.panel4.TabIndex = 0;
             // 
             // lblTotalRevenue
@@ -353,7 +372,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.Controls.Add(this.lblActiveCards);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(320, 5);
+            this.panel5.Location = new System.Drawing.Point(319, 5);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(314, 139);
@@ -387,7 +406,7 @@
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.lblTodayPlays);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(646, 5);
+            this.panel6.Location = new System.Drawing.Point(644, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(314, 139);
@@ -421,7 +440,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.18033F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.81967F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 326F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
@@ -532,9 +551,6 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlSidebar;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnTransactions;
-        private System.Windows.Forms.Button btnPlayDeduction;
         private System.Windows.Forms.Button btnGameManagement;
         private System.Windows.Forms.Button btnCardManagement;
         private System.Windows.Forms.Panel pnlLogoSection;
@@ -560,5 +576,9 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblTypeName;
         private System.Windows.Forms.Label lblActualAmount;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnOffer;
     }
 }
