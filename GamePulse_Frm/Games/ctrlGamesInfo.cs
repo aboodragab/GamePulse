@@ -34,6 +34,14 @@ namespace GamePulse_Frm.Games
             lblCategory.Text = clsGameTypesBus.Find(Game.GameTypeID).GameTypeName;
 
         }
+        public void RestForm()
+        {
+            lblGameID.Text = "[????]";
+            lblCategory.Text = "[????]";
+            lblName.Text = "[????]";
+            lblPrice.Text = "[????]";
+            lblStatus.Text = "[????]";
+        }
         private void ctrlGamesInfo_Load(object sender, EventArgs e)
         {
 

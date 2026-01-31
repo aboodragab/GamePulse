@@ -84,5 +84,14 @@ namespace GamePulse_Business
             }
             return false;
         }
+        public static bool ActiveGame(int GameID)
+        {
+            return clsGamesDataAcc.UpdateGameStatus(GameID, true);
+        }
+        public static bool BlockGame(int GameID)
+        {
+            return clsGamesDataAcc.UpdateGameStatus(GameID, false);
+        }
+
     }
 }

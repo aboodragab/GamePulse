@@ -128,5 +128,29 @@ namespace GamePulse_DataAccess
 
             return dt;
         }
+        
+        public static bool UpdateGameStatus(int GameID, bool NewStatus)
+        {
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.connectionString);
+
+            string sql = @"UPDATE Games SET isActive = @NewStatus WHERE GameID = @GameID";
+
+            SqlCommand command = new SqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@GameID", GameID);
+            command.Parameters.AddWithValue("@NewStatus", NewStatus);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally { connection.Close(); }
+
+            return rowsAffected > 0;
+        }
     }
 }

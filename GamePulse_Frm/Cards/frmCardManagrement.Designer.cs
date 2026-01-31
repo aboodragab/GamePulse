@@ -177,6 +177,7 @@
             this.btnGameManagement.Text = "  🎮   Game Management";
             this.btnGameManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGameManagement.UseVisualStyleBackColor = false;
+            this.btnGameManagement.Click += new System.EventHandler(this.btnGameManagement_Click);
             // 
             // btnCardManagement
             // 

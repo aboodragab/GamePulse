@@ -102,6 +102,12 @@
     <Compile Include="Games\ctrlGamesInfo.Designer.cs">
       <DependentUpon>ctrlGamesInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Games\frmAddUpdateGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Games\frmAddUpdateGame.Designer.cs">
+      <DependentUpon>frmAddUpdateGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Games\frmGameInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Games\ctrlGamesInfo.resx">
       <DependentUpon>ctrlGamesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Games\frmAddUpdateGame.resx">
+      <DependentUpon>frmAddUpdateGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games\frmGameInfo.resx">
       <DependentUpon>frmGameInfo.cs</DependentUpon>

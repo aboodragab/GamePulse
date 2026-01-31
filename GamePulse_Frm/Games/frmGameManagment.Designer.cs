@@ -49,9 +49,12 @@
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblSubLogo = new System.Windows.Forms.Label();
             this.dgvGames = new System.Windows.Forms.DataGridView();
-            this.btnAddGame = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showGameInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddGame = new System.Windows.Forms.Button();
+            this.updateGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blockGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogoSection.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -317,6 +320,25 @@
             this.dgvGames.TabIndex = 5;
             this.dgvGames.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGames_CellContentClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showGameInfoToolStripMenuItem,
+            this.updateGameToolStripMenuItem,
+            this.activeGameToolStripMenuItem,
+            this.blockGameToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 165);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // showGameInfoToolStripMenuItem
+            // 
+            this.showGameInfoToolStripMenuItem.Name = "showGameInfoToolStripMenuItem";
+            this.showGameInfoToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.showGameInfoToolStripMenuItem.Text = "Show Game Info";
+            this.showGameInfoToolStripMenuItem.Click += new System.EventHandler(this.showGameInfoToolStripMenuItem_Click);
+            // 
             // btnAddGame
             // 
             this.btnAddGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -333,21 +355,28 @@
             this.btnAddGame.Text = "  +   Add New Game";
             this.btnAddGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddGame.UseVisualStyleBackColor = false;
+            this.btnAddGame.Click += new System.EventHandler(this.btnAddGame_Click);
             // 
-            // contextMenuStrip1
+            // updateGameToolStripMenuItem
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showGameInfoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(217, 36);
+            this.updateGameToolStripMenuItem.Name = "updateGameToolStripMenuItem";
+            this.updateGameToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.updateGameToolStripMenuItem.Text = "Update Game";
+            this.updateGameToolStripMenuItem.Click += new System.EventHandler(this.updateGameToolStripMenuItem_Click);
             // 
-            // showGameInfoToolStripMenuItem
+            // activeGameToolStripMenuItem
             // 
-            this.showGameInfoToolStripMenuItem.Name = "showGameInfoToolStripMenuItem";
-            this.showGameInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 32);
-            this.showGameInfoToolStripMenuItem.Text = "Show Game Info";
-            this.showGameInfoToolStripMenuItem.Click += new System.EventHandler(this.showGameInfoToolStripMenuItem_Click);
+            this.activeGameToolStripMenuItem.Name = "activeGameToolStripMenuItem";
+            this.activeGameToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.activeGameToolStripMenuItem.Text = "Active Game";
+            this.activeGameToolStripMenuItem.Click += new System.EventHandler(this.activeGameToolStripMenuItem_Click);
+            // 
+            // blockGameToolStripMenuItem
+            // 
+            this.blockGameToolStripMenuItem.Name = "blockGameToolStripMenuItem";
+            this.blockGameToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.blockGameToolStripMenuItem.Text = "Block Game";
+            this.blockGameToolStripMenuItem.Click += new System.EventHandler(this.blockGameToolStripMenuItem_Click);
             // 
             // frmGameManagment
             // 
@@ -392,5 +421,8 @@
         private System.Windows.Forms.Button btnAddGame;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showGameInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeGameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blockGameToolStripMenuItem;
     }
 }

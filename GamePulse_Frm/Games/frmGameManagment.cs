@@ -76,9 +76,9 @@ namespace GamePulse_Frm.Games
                     dgvGames.Columns["DefaultPrice"].DefaultCellStyle.ForeColor = Color.DarkGreen; // تمييز السعر بالأخضر
                 }
 
-                if (dgvGames.Columns.Contains("isActive"))
+                if (dgvGames.Columns.Contains("Status"))
                 {
-                    dgvGames.Columns["isActive"].HeaderText = "Status";
+                    dgvGames.Columns["Status"].HeaderText = "Status";
                 }
 
                 if (dgvGames.Columns.Contains("GameTypeName"))
@@ -111,11 +111,74 @@ namespace GamePulse_Frm.Games
             int GameID = (int)dgvGames.CurrentRow.Cells[0].Value;
             frmGameInfo game = new frmGameInfo(GameID);
             game.ShowDialog();
-            this.Close();
+            
         }
 
         private void dgvGames_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void btnAddGame_Click(object sender, EventArgs e)
+        {
+            frmAddUpdateGame addUpdateGame = new frmAddUpdateGame();
+            addUpdateGame.ShowDialog();
+            
+            _FormatGamesGrid();
+        }
+
+        private void updateGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int GameID = (int)dgvGames.CurrentRow.Cells[0].Value;
+            frmAddUpdateGame addUpdateGame = new frmAddUpdateGame(GameID);
+            addUpdateGame.ShowDialog();
+            
+            _FormatGamesGrid();
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            string currentStatus = dgvGames.CurrentRow.Cells["Status"].Value.ToString();
+            if(currentStatus == "Active")
+            {
+                activeGameToolStripMenuItem.Enabled = false;
+                blockGameToolStripMenuItem.Enabled = true;
+                updateGameToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                activeGameToolStripMenuItem.Enabled = true;
+                blockGameToolStripMenuItem.Enabled = false;
+                updateGameToolStripMenuItem.Enabled = false;
+            }
+        }
+
+        private void activeGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Games = (int)dgvGames.CurrentRow.Cells[0].Value;
+            if (clsGamesBus.ActiveGame(Games))
+            {
+                MessageBox.Show("Game has been activated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _FormatGamesGrid();
+            }
+            else
+            {
+                MessageBox.Show("Failed to activate the Game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void blockGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Games = (int)dgvGames.CurrentRow.Cells[0].Value;
+            if (clsGamesBus.BlockGame(Games))
+            {
+                MessageBox.Show("Game has been blocked successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                _FormatGamesGrid();
+            }
+            else
+            {
+                MessageBox.Show("Failed to block the Game.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

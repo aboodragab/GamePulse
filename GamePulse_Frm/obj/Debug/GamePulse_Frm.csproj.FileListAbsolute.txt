@@ -23,3 +23,4 @@ D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmGameManagment.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.ctrlGamesInfo.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmGameInfo.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Games.frmAddUpdateGame.resources

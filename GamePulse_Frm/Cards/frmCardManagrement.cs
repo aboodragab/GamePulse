@@ -1,5 +1,6 @@
 ﻿using GamePulse_Business;
 using GamePulse_Frm.Cards;
+using GamePulse_Frm.Games;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -173,6 +174,13 @@ namespace GamePulse_Frm
         private void dgvCards_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnGameManagement_Click(object sender, EventArgs e)
+        {
+            frmGameManagment frm=new frmGameManagment();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }
