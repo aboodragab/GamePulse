@@ -32,9 +32,9 @@ namespace GamePulse_Frm
                 }
 
                 clsGlobal.CurrentUser = user;
-                this.Hide();
                 frmDashboard dashboard = new frmDashboard();
                 dashboard.ShowDialog();
+                this.Close();
 
             }
             else

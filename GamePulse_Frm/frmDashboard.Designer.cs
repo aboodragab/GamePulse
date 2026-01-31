@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -38,7 +38,6 @@
             this.btnTransactions = new System.Windows.Forms.Button();
             this.btnPlayDeduction = new System.Windows.Forms.Button();
             this.btnGameManagement = new System.Windows.Forms.Button();
-            this.btnTopUp = new System.Windows.Forms.Button();
             this.btnCardManagement = new System.Windows.Forms.Button();
             this.pnlLogoSection = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -101,7 +100,6 @@
             this.pnlSidebar.Controls.Add(this.btnTransactions);
             this.pnlSidebar.Controls.Add(this.btnPlayDeduction);
             this.pnlSidebar.Controls.Add(this.btnGameManagement);
-            this.pnlSidebar.Controls.Add(this.btnTopUp);
             this.pnlSidebar.Controls.Add(this.btnCardManagement);
             this.pnlSidebar.Controls.Add(this.btnDashboard);
             this.pnlSidebar.Controls.Add(this.pnlLogoSection);
@@ -135,7 +133,7 @@
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnReports.Location = new System.Drawing.Point(0, 484);
+            this.btnReports.Location = new System.Drawing.Point(0, 422);
             this.btnReports.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(315, 62);
@@ -151,7 +149,7 @@
             this.btnTransactions.FlatAppearance.BorderSize = 0;
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnTransactions.Location = new System.Drawing.Point(0, 422);
+            this.btnTransactions.Location = new System.Drawing.Point(0, 360);
             this.btnTransactions.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.Size = new System.Drawing.Size(315, 62);
@@ -167,7 +165,7 @@
             this.btnPlayDeduction.FlatAppearance.BorderSize = 0;
             this.btnPlayDeduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayDeduction.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnPlayDeduction.Location = new System.Drawing.Point(0, 360);
+            this.btnPlayDeduction.Location = new System.Drawing.Point(0, 298);
             this.btnPlayDeduction.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnPlayDeduction.Name = "btnPlayDeduction";
             this.btnPlayDeduction.Size = new System.Drawing.Size(315, 62);
@@ -183,7 +181,7 @@
             this.btnGameManagement.FlatAppearance.BorderSize = 0;
             this.btnGameManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGameManagement.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnGameManagement.Location = new System.Drawing.Point(0, 298);
+            this.btnGameManagement.Location = new System.Drawing.Point(0, 236);
             this.btnGameManagement.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnGameManagement.Name = "btnGameManagement";
             this.btnGameManagement.Size = new System.Drawing.Size(315, 62);
@@ -191,22 +189,6 @@
             this.btnGameManagement.Text = "  🎮   Game Management";
             this.btnGameManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGameManagement.UseVisualStyleBackColor = false;
-            // 
-            // btnTopUp
-            // 
-            this.btnTopUp.BackColor = System.Drawing.Color.White;
-            this.btnTopUp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTopUp.FlatAppearance.BorderSize = 0;
-            this.btnTopUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopUp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnTopUp.Location = new System.Drawing.Point(0, 236);
-            this.btnTopUp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnTopUp.Name = "btnTopUp";
-            this.btnTopUp.Size = new System.Drawing.Size(315, 62);
-            this.btnTopUp.TabIndex = 5;
-            this.btnTopUp.Text = "  $   Top-Up";
-            this.btnTopUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTopUp.UseVisualStyleBackColor = false;
             // 
             // btnCardManagement
             // 
@@ -298,35 +280,35 @@
             this.dgvTransactions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTransactions.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvTransactions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransactions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransactions.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransactions.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransactions.EnableHeadersVisualStyles = false;
             this.dgvTransactions.Location = new System.Drawing.Point(315, 360);
             this.dgvTransactions.Name = "dgvTransactions";
             this.dgvTransactions.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransactions.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransactions.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransactions.RowHeadersWidth = 62;
             this.dgvTransactions.RowTemplate.Height = 28;
             this.dgvTransactions.Size = new System.Drawing.Size(969, 318);
@@ -405,7 +387,7 @@
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.Controls.Add(this.lblTodayPlays);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(647, 5);
+            this.panel6.Location = new System.Drawing.Point(646, 5);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(314, 139);
@@ -439,7 +421,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.18033F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.81967F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 325F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 326F));
             this.tableLayoutPanel1.Controls.Add(this.panel6, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 0);
@@ -554,7 +536,6 @@
         private System.Windows.Forms.Button btnTransactions;
         private System.Windows.Forms.Button btnPlayDeduction;
         private System.Windows.Forms.Button btnGameManagement;
-        private System.Windows.Forms.Button btnTopUp;
         private System.Windows.Forms.Button btnCardManagement;
         private System.Windows.Forms.Panel pnlLogoSection;
         private System.Windows.Forms.Label lblLogo;

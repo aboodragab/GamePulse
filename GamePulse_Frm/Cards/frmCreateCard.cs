@@ -27,7 +27,7 @@ namespace GamePulse_Frm
             clsCardsBus card = new clsCardsBus();
             card.CardUID=txtRFID.Text;
             card.Balance = 0;
-            card.CreatedByUserID=1;
+            card.CreatedByUserID=clsGlobal.CurrentUser.UserID;
 
             if (card.Save())
             {
@@ -35,7 +35,7 @@ namespace GamePulse_Frm
 
                 if (decimal.TryParse(txtBalance.Text, out initialAmount) && initialAmount > 0)
                 {
-                    if (clsTransactionsBus.RechargeCard(card.CardID, initialAmount, 1, null))
+                    if (clsTransactionsBus.RechargeCard(card.CardID, initialAmount, clsGlobal.CurrentUser.UserID, null))
                     {
                         card.Recharge(initialAmount);
                         MessageBox.Show("Card created and initialized with balance successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,7 +38,6 @@
             this.btnTransactions = new System.Windows.Forms.Button();
             this.btnPlayDeduction = new System.Windows.Forms.Button();
             this.btnGameManagement = new System.Windows.Forms.Button();
-            this.btnTopUp = new System.Windows.Forms.Button();
             this.btnCardManagement = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.pnlLogoSection = new System.Windows.Forms.Panel();
@@ -48,12 +48,16 @@
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblSubLogo = new System.Windows.Forms.Label();
             this.dgvCards = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tmsShowInfo = new System.Windows.Forms.ToolStripMenuItem();
+            this.rechargeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreateCard = new System.Windows.Forms.Button();
             this.pnlSidebar.SuspendLayout();
             this.pnlLogoSection.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCards)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSidebar
@@ -64,7 +68,6 @@
             this.pnlSidebar.Controls.Add(this.btnTransactions);
             this.pnlSidebar.Controls.Add(this.btnPlayDeduction);
             this.pnlSidebar.Controls.Add(this.btnGameManagement);
-            this.pnlSidebar.Controls.Add(this.btnTopUp);
             this.pnlSidebar.Controls.Add(this.btnCardManagement);
             this.pnlSidebar.Controls.Add(this.btnDashboard);
             this.pnlSidebar.Controls.Add(this.pnlLogoSection);
@@ -98,7 +101,7 @@
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnReports.Location = new System.Drawing.Point(0, 484);
+            this.btnReports.Location = new System.Drawing.Point(0, 422);
             this.btnReports.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(315, 62);
@@ -114,7 +117,7 @@
             this.btnTransactions.FlatAppearance.BorderSize = 0;
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransactions.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnTransactions.Location = new System.Drawing.Point(0, 422);
+            this.btnTransactions.Location = new System.Drawing.Point(0, 360);
             this.btnTransactions.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.Size = new System.Drawing.Size(315, 62);
@@ -130,7 +133,7 @@
             this.btnPlayDeduction.FlatAppearance.BorderSize = 0;
             this.btnPlayDeduction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlayDeduction.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnPlayDeduction.Location = new System.Drawing.Point(0, 360);
+            this.btnPlayDeduction.Location = new System.Drawing.Point(0, 298);
             this.btnPlayDeduction.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnPlayDeduction.Name = "btnPlayDeduction";
             this.btnPlayDeduction.Size = new System.Drawing.Size(315, 62);
@@ -146,7 +149,7 @@
             this.btnGameManagement.FlatAppearance.BorderSize = 0;
             this.btnGameManagement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGameManagement.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnGameManagement.Location = new System.Drawing.Point(0, 298);
+            this.btnGameManagement.Location = new System.Drawing.Point(0, 236);
             this.btnGameManagement.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnGameManagement.Name = "btnGameManagement";
             this.btnGameManagement.Size = new System.Drawing.Size(315, 62);
@@ -154,22 +157,6 @@
             this.btnGameManagement.Text = "  🎮   Game Management";
             this.btnGameManagement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGameManagement.UseVisualStyleBackColor = false;
-            // 
-            // btnTopUp
-            // 
-            this.btnTopUp.BackColor = System.Drawing.Color.White;
-            this.btnTopUp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTopUp.FlatAppearance.BorderSize = 0;
-            this.btnTopUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTopUp.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnTopUp.Location = new System.Drawing.Point(0, 236);
-            this.btnTopUp.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.btnTopUp.Name = "btnTopUp";
-            this.btnTopUp.Size = new System.Drawing.Size(315, 62);
-            this.btnTopUp.TabIndex = 5;
-            this.btnTopUp.Text = "  $   Top-Up";
-            this.btnTopUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTopUp.UseVisualStyleBackColor = false;
             // 
             // btnCardManagement
             // 
@@ -288,6 +275,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCards.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCards.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCards.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,6 +300,29 @@
             this.dgvCards.RowTemplate.Height = 28;
             this.dgvCards.Size = new System.Drawing.Size(969, 318);
             this.dgvCards.TabIndex = 4;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tmsShowInfo,
+            this.rechargeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
+            // 
+            // tmsShowInfo
+            // 
+            this.tmsShowInfo.Name = "tmsShowInfo";
+            this.tmsShowInfo.Size = new System.Drawing.Size(240, 32);
+            this.tmsShowInfo.Text = "Show Info";
+            this.tmsShowInfo.Click += new System.EventHandler(this.tmsShowInfo_Click);
+            // 
+            // rechargeToolStripMenuItem
+            // 
+            this.rechargeToolStripMenuItem.Name = "rechargeToolStripMenuItem";
+            this.rechargeToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.rechargeToolStripMenuItem.Text = "Recharge";
+            this.rechargeToolStripMenuItem.Click += new System.EventHandler(this.rechargeToolStripMenuItem_Click);
             // 
             // btnCreateCard
             // 
@@ -347,6 +358,7 @@
             this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCards)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -359,7 +371,6 @@
         private System.Windows.Forms.Button btnTransactions;
         private System.Windows.Forms.Button btnPlayDeduction;
         private System.Windows.Forms.Button btnGameManagement;
-        private System.Windows.Forms.Button btnTopUp;
         private System.Windows.Forms.Button btnCardManagement;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel pnlLogoSection;
@@ -371,5 +382,8 @@
         private System.Windows.Forms.Label lblSubLogo;
         private System.Windows.Forms.DataGridView dgvCards;
         private System.Windows.Forms.Button btnCreateCard;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tmsShowInfo;
+        private System.Windows.Forms.ToolStripMenuItem rechargeToolStripMenuItem;
     }
 }

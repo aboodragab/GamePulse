@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\ctrlCardInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\ctrlCardInfo.Designer.cs">
+      <DependentUpon>ctrlCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\frmCardInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\frmCardInfo.Designer.cs">
+      <DependentUpon>frmCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\frmRechargeCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cards\frmRechargeCard.Designer.cs">
+      <DependentUpon>frmRechargeCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
     <Compile Include="ctrlMenu.cs">
@@ -54,16 +72,16 @@
     <Compile Include="ctrlMenu.Designer.cs">
       <DependentUpon>ctrlMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCardManagrement.cs">
+    <Compile Include="Cards\frmCardManagrement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCardManagrement.Designer.cs">
+    <Compile Include="Cards\frmCardManagrement.Designer.cs">
       <DependentUpon>frmCardManagrement.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCreateCard.cs">
+    <Compile Include="Cards\frmCreateCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCreateCard.Designer.cs">
+    <Compile Include="Cards\frmCreateCard.Designer.cs">
       <DependentUpon>frmCreateCard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDashboard.cs">
@@ -80,13 +98,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cards\ctrlCardInfo.resx">
+      <DependentUpon>ctrlCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\frmCardInfo.resx">
+      <DependentUpon>frmCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\frmRechargeCard.resx">
+      <DependentUpon>frmRechargeCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlMenu.resx">
       <DependentUpon>ctrlMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCardManagrement.resx">
+    <EmbeddedResource Include="Cards\frmCardManagrement.resx">
       <DependentUpon>frmCardManagrement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCreateCard.resx">
+    <EmbeddedResource Include="Cards\frmCreateCard.resx">
       <DependentUpon>frmCreateCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
@@ -103,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +150,15 @@
       <Project>{107ce538-7088-433b-912f-3192b24c5788}</Project>
       <Name>GamePulse_Business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_dollar_sign %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort_by_status.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

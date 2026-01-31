@@ -73,9 +73,9 @@ namespace GamePulse_Frm
         }
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.TopMost = true;
             _RefreshAllDashboardData();
         }
         private void _RefreshDashboardStats()
@@ -114,6 +114,7 @@ namespace GamePulse_Frm
         {
             frmCardManagrement cardManagrement = new frmCardManagrement();
             cardManagrement.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -17,3 +17,6 @@ D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePuls.DB50EC3E.U
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmCardManagrement.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmCreateCard.resources
 D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.frmLogin.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.ctrlCardInfo.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.frmCardInfo.resources
+D:\C#\GamePulse\GamePulse_DataAccess\GamePulse_Frm\obj\Debug\GamePulse_Frm.Cards.frmRechargeCard.resources

@@ -1,4 +1,5 @@
 ﻿using GamePulse_Business;
+using GamePulse_Frm.Cards;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,9 +88,9 @@ namespace GamePulse_Frm
         }
         private void frmCardManagrement_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
+            //this.TopMost = true;
             _FormatCardsGrid();
         }
 
@@ -109,6 +110,18 @@ namespace GamePulse_Frm
             frmCreateCard frmCreateCard = new frmCreateCard();
             frmCreateCard.ShowDialog(this);
             frmCardManagrement_Load(null, null);
+        }
+
+        private void tmsShowInfo_Click(object sender, EventArgs e)
+        {
+            frmCardInfo Card = new frmCardInfo((int)dgvCards.CurrentRow.Cells[0].Value);
+            Card.ShowDialog();
+        }
+
+        private void rechargeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRechargeCard rechargeCard = new frmRechargeCard((int)dgvCards.CurrentRow.Cells[0].Value);
+            rechargeCard.ShowDialog();
         }
     }
 }
